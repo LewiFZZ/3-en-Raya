@@ -1,5 +1,9 @@
-// Levi Josué Candeias de Figueiredo
-// Juego del tres en raya (Tick-tack-toe)
+/*
+    Levi Josué Candeias de Figueiredo
+    Juego del tres en raya (Tick-tack-toe)
+    14/03/2024
+*/
+
 #include <stdio.h>
 
 //Prototipos
@@ -12,8 +16,9 @@ int verificarCelda(char, char tablero[3][3]);
 void graciasPorJugar(void);
 void modificarRegistro(FILE *historialDeJuegos, int);
 
-
+//Variables globales
 int jugadorActual = 1; // Variable global para seguir al jugador actual
+
 int main()
 {
     printf("\n|Bienvenido al juego del tres en raya|\n");
@@ -31,8 +36,13 @@ int main()
     if (respuestaReglas == 's')
         reglas(); //Muestra las reglas
 
+
+    int jugada = 0;
     while (1)
     {
+
+        printf("|Jugada Numero %d|\n", jugada + 1);
+        printf("\nJugador actual: %d\n", jugadorActual);
 
         char celdaSeleccionada = seleccionarCelda(); //Selecciona la celda
 
@@ -74,6 +84,7 @@ int main()
         } else {
             jugadorActual = 1;
         }
+        jugada++;
     }
     graciasPorJugar();
     return 0;
@@ -201,9 +212,9 @@ void graciasPorJugar(void)
 void modificarRegistro(FILE *historialDeJuegos, int partidasJugadas)
 {
     int partidas;
-    rewind(historialDeJuegos); // Go to the start of the file
+    rewind(historialDeJuegos);
     fscanf(historialDeJuegos, "Total de partidas jugadas: %d\n", &partidas);
     partidas += partidasJugadas;
-    freopen(NULL, "w", historialDeJuegos); // Clear the file
+    freopen(NULL, "w", historialDeJuegos);
     fprintf(historialDeJuegos, "Total de partidas jugadas: %d\n", partidas);
 }
