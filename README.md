@@ -10,6 +10,6 @@ Después de cada turno, el programa verifica si alguno de los jugadores ha ganad
 Además, el programa mantiene un registro del número total de partidas jugadas en un archivo llamado historialDeJuegos.txt.
 Cada vez que se juega una partida, el programa incrementa el número total de partidas jugadas y actualiza el archivo.
 
-inalmente, cuando el juego termina, el programa muestra un mensaje de agradecimiento y guarda este mensaje en un archivo llamado gracias.txt.
+Finalmente, cuando el juego termina, el programa muestra un mensaje de agradecimiento y guarda este mensaje en un archivo llamado gracias.txt.
 
 Autor: Levi Josué Candeias de Figueiredo
