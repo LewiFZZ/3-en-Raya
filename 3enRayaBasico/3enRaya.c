@@ -31,7 +31,7 @@ int main()
             {'7', '8', '9'}
     };
 
-    printf("¿Quieres leer las reglas? (s/n): ");
+    printf("Quieres leer las reglas? (s/n): ");
     char respuestaReglas = seleccionarReglas(); //Selecciona si quiere leer las reglas
     if (respuestaReglas == 's')
         reglas(); //Muestra las reglas
@@ -118,10 +118,10 @@ char seleccionarReglas(void)
 void reglas(void)
 {
     printf("\n|Reglas|\n");
-    printf("1. El juego se juega en una cuadrícula de 3 cuadrados por 3 cuadrados.\n");
-    printf("2. Tú eres X, tu amigo es O. Los jugadores se turnan para poner sus marcas en cuadrados vacíos.\n");
-    printf("3. El primer jugador en conseguir 3 de sus marcas en una fila (arriba, abajo, a través, o en diagonal) es el ganador.\n");
-    printf("4. Cuando los 9 cuadrados están llenos, el juego termina. Si ningún jugador tiene 3 marcas en una fila, el juego termina en un empate.\n");
+    printf("1. El juego se juega en una cuadricula de 3 cuadrados por 3 cuadrados.\n");
+    printf("2. Tu eres X, tu amigo es O. Los jugadores se turnan para poner sus marcas en cuadrados vacios.\n");
+    printf("3. El primer jugador en conseguir 3 de sus marcas en una fila (arriba, abajo, a traves, o en diagonal) es el ganador.\n");
+    printf("4. Cuando los 9 cuadrados están llenos, el juego termina. Si ningun jugador tiene 3 marcas en una fila, el juego termina en un empate.\n");
     printf("5. A JUGAR\n");
 }
 char seleccionarCelda(void)
